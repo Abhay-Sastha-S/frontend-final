@@ -8,9 +8,10 @@ from pymongo import MongoClient
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import Query
+import os
 
 from pymongo.server_api import ServerApi
-uri = "mongodb+srv://abhaysasthacode:ixrfU702nCG2OIV8@cluster9.fgr9j.mongodb.net/?retryWrites=true&w=majority&appName=Cluster9"
+uri = os.getenv{URI}
 client = MongoClient(uri, server_api=ServerApi('1'))
 db = client["abm_database"] 
 
@@ -75,7 +76,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 # Arliai API key and endpoint
-ARLIAI_API_KEY = "e25143d2-7aa6-478c-a1d3-01aee11430a1"
+ARLIAI_API_KEY = os.getenv{API_KEY}
 ARLIAI_URL = "https://api.arliai.com/v1/chat/completions"
 
 # Helper function to interact with Arliai
