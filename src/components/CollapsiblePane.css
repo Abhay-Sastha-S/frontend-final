@@ -1,0 +1,74 @@
+.collapsible-pane {
+  width: 300px;
+  background-color: var(--card-background);
+  border-right: 1px solid #e3e3e3;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+  z-index: 1000;
+}
+
+.collapsible-pane .search-bar {
+  padding: 15px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.collapsible-pane .search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.accounts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.account-item {
+  padding: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid #e3e3e3;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .account-item.expanded {
+  background-color: var(--button-hover-color);
+  color: #ffffff;
+} */
+
+.contacts-list {
+  list-style: none;
+  padding-left: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.contacts-list.expanded {
+  max-height: 500px; /* Large enough to fit all contacts */
+  overflow: visible;
+}
+
+.contact-item {
+  padding: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.account-item:hover {
+  background-color: var(--button-color);
+  color: #ffffff; /* Highlight on hover */
+}
+
+.contact-item:hover {
+  color: var(--button-hover-color); /* Highlight for contact on hover */
+}

@@ -1,0 +1,27 @@
+.dashboard {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard h2 {
+  margin-bottom: 20px;
+  font-size: 1.75rem;
+}
+
+.campaign-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.card {
+  max-width: 350px;
+  width: 100%;
+  background-color: var(--card-background);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
